@@ -1,0 +1,38 @@
+# question one:
+
+first_string = "ai dojo"
+print(first_string)
+second_string = first_string.replace("ai", "  ")
+print(second_string)
+
+# question two:
+
+lowest_value = int(input ("Enter the Lowest Value you want: "))
+upperest_value = int(input ("Enter the upperst Value you want: "))
+print ("The Prime Numbers in range are: ") 
+for number in range (lowest_value, upperest_value + 1):
+  if number > 1:
+    for i in range (2, number): 
+      if (number % i) == 0:
+        break
+    else:
+         print (number)
+
+# question three:
+
+def countChars(String):
+ print("Count of Characters in the given String are!");
+ for i in range(0, len(String)):
+     count = 1;
+     for j in range(i+1, len(String)):
+       if(String[i] == String[j] and String[i] != ' '):
+          count = count + 1;
+          String = String[:j] + '0' + String[j+1:]
+     if(count > 1 and String[i] != '0'):
+        print(String[i]," - ",count)
+String = input("Enter a String:")
+countChars(String)
+
+
+
+
